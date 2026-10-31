@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poem Heart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   textarea{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 5;
+   }
+  </style>
+</head>
+<body>
+  <textarea id="poem" type="text" aria-label="Poem" placeholder="Enter your poem" readonly maxlength="12000">Under the ribs they carve it out and hold it high up, still beating with steam. Its chambers panic, the atrium fluttering against their soot palms. By the tons they tamp it into carts, hoist it to the breaker, and then feed the mass to the crushers. Next, dry sorting and sifting. The mill boys tuck their bodies tight to the conveyor and nimble through the mess, picking with their little fingers at bits of brittle flesh and slate. From the ventricles, they find chestnuts, barley culm and buckwheat. Every boy is paid a dollar for the day. Then what’s left is carted along to the loading bay, where rail cars fill with fossil fires from the sun.</textarea>
+  <main id="stage">
+    <canvas id="heart-canvas" tabindex="0" aria-label="Poem heart. Drag to rotate, Shift-drag to move, scroll to zoom. On touch screens, drag with one finger to rotate, two fingers to move, and pinch to zoom. Home resets the view."></canvas>
+    <div id="view-controls"><span class="desktop-hint">Drag to rotate · Shift-drag to move · Scroll to zoom</span><span class="touch-hint">One finger: rotate · Two fingers: move · Pinch: zoom</span><button id="reset-view" type="button">Reset view</button></div>
+    <p id="stage-message" role="alert" hidden></p>
+  </main>
+  <!-- Anatomy: BodyParts3D / DBCLS, CC BY 4.0. See assets/ATTRIBUTION.md. -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
